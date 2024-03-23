@@ -16,6 +16,7 @@ header {
     width: 100%;
     height: 100%;
     background-image: url("../image/beautiful-mountain-road-landscape.jpg");
+    /* background-image: url("../image/carrental2-sectionbg1.jpg"); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -144,8 +145,60 @@ nav li:first-child {
 }
 
 /* ----------------------- main ---------------------------- */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 
-main {
+.logoContainer:hover .logo-slide {
+    animation-play-state: paused;
+}
+
+.logoContainer {
+    background-color: #0F0F0F;
+    /* height: 150px; */
+    display: flex;
+    /* align-items: center; */
+    overflow: hidden;
+    padding: 60px 0 ;
+    position: relative;
+}
+
+/* .logoContainer::before, .logoContainer::after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+} 
+
+.logoContainer::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255 , 255, 0), white);
+}
+
+.logoContainer::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255 , 255, 0), white);
+} */
+
+.logo-slide {
+    white-space: nowrap;
+    animation: 25s slide infinite linear;
+}
+
+.logo-slide img {
+    height: 75px;
+    margin: 0 40px;
+}
+
+
+section {
     min-height: 100vh;
     display: flex;
 }
@@ -246,12 +299,14 @@ main {
 
 
 
+
 .containImage {
     width: 100%;
 }
 
 .imageContainer {
     width: 100%;
+    height: 60%;
     display: flex;
     justify-content: center;
     padding-top: 50px;
@@ -261,6 +316,7 @@ main {
     width: 80%;
     opacity: 0; /* Initially hide the image */
     transition: opacity 2s ease; /* Apply transition to opacity property */
+    mix-blend-mode: color-burn;
 }
   
 .carImage.loaded {

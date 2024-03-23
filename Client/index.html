@@ -41,67 +41,97 @@
 
     </header>
     <main>
-        <div class="globalInfo">
-            <div class="globalInfoCont">
-                <div class="nameCarContainer">
-                    <h1 class="nameCar">Mercedes-Benz</h1>
-                </div>
-                <div class="descContainerCont">
-                    <div class="descContainer">
-                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel nulla ac turpis porta commodo eget sit amet sapien. Vivamus finibus nibh et sollicitudin pretium. In mollis erat non tellus.</p>
-                    </div>
-                </div>
-    
-                <div class="optionsContainer">
-                    <div class="firstContainer">
-                        <div class="firstOption">
-                            <img src="./image/compteur-de-vitesse.png" />
-                            <p class="vitesseValue">190 Km/h</p>
-                        </div>
-                        <div class="secondOption">
-                            <img src="./image/moteur-turbo.png" />
-                            <p class="turboValue">220 KM</p>
-                        </div>
-                    </div>
-                    <div class="secondContainer">
-                        <div class="thirdOption">
-                            <img src="./image/manual-transmission.png" />
-                            <p class="transmissionValue">Manual</p>
-                        </div>
-                        <div class="fourthOption">
-                            <img src="./image/gas-station.png" />
-                            <p class="gasValue">EV</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="priceButton">
-                    <div class="globalBtn">
-                        <p class="globalBtnText">Rent now</p>
-                        <img src="./image/next.png" alt="arrow" />
-                    </div>
-                    <div class="globalPrice">
-                        <p class="globalPriceValue">149 DT</p>
-                        <p class="globalPriceInfo">per day</p>
-                    </div>
-                </div>
+        <div class="logoContainer">
+            <div class="logo-slide">
+                <img src="./image/logo1.png"/>
+                <img src="./image/logo2.png"/>
+                <img src="./image/logo3.png"/>
+                <img src="./image/logo4.png"/>
+                <img src="./image/logo5.png"/>
+                <img src="./image/logo6.png"/>
+                <img src="./image/logo7.png"/>
+                <img src="./image/logo8.png"/>
+                <img src="./image/logo9.png"/>
+                <img src="./image/logo10.png"/>
+            </div>
+            <!-- <div class="logo-slide">
+                <img src="./image/logo1.png"/>
+                <img src="./image/logo2.png"/>
+                <img src="./image/logo3.png"/>
+                <img src="./image/logo4.png"/>
+                <img src="./image/logo5.png"/>
+                <img src="./image/logo6.png"/>
+                <img src="./image/logo7.png"/>
+                <img src="./image/logo8.png"/>
+                <img src="./image/logo9.png"/>
+                <img src="./image/logo10.png"/>
+            </div> -->
 
-            </div>
         </div>
-        <div class="containImage">
-            <div class="imageContainer">
-                <img class="carImage" src="./image/pngfind.com-car-front-png-218600.png" alt="car image"/>
+        <section>
+            <div class="globalInfo">
+                <div class="globalInfoCont">
+                    <div class="nameCarContainer">
+                        <h1 class="nameCar">Mercedes-Benz</h1>
+                    </div>
+                    <div class="descContainerCont">
+                        <div class="descContainer">
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel nulla ac turpis porta commodo eget sit amet sapien. Vivamus finibus nibh et sollicitudin pretium. In mollis erat non tellus.</p>
+                        </div>
+                    </div>
+        
+                    <div class="optionsContainer">
+                        <div class="firstContainer">
+                            <div class="firstOption">
+                                <img src="./image/compteur-de-vitesse.png" />
+                                <p class="vitesseValue">190 Km/h</p>
+                            </div>
+                            <div class="secondOption">
+                                <img src="./image/moteur-turbo.png" />
+                                <p class="turboValue">220 KM</p>
+                            </div>
+                        </div>
+                        <div class="secondContainer">
+                            <div class="thirdOption">
+                                <img src="./image/manual-transmission.png" />
+                                <p class="transmissionValue">Manual</p>
+                            </div>
+                            <div class="fourthOption">
+                                <img src="./image/gas-station.png" />
+                                <p class="gasValue">EV</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="priceButton">
+                        <div class="globalBtn">
+                            <p class="globalBtnText">Rent now</p>
+                            <img src="./image/next.png" alt="arrow" />
+                        </div>
+                        <div class="globalPrice">
+                            <p class="globalPriceValue">149 DT</p>
+                            <p class="globalPriceInfo">per day</p>
+                        </div>
+                    </div>
+    
+                </div>
             </div>
-            <div class="arrowContainer">
-                <div onclick=previousCar() class="arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+            <div class="containImage">
+                <div class="imageContainer">
+                    <img class="carImage" src="./image/pngfind.com-car-front-png-218600.png" alt="car image"/>
                 </div>
-                <div onclick=nextCar() class="arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                <div class="arrowContainer">
+                    <div onclick=previousCar() class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                    </div>
+                    <div onclick=nextCar() class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </div>
+    
                 </div>
+            </div>
 
-            </div>
-        </div>
+        </section>
     </main>
 
     <script src="./js/script.js"></script>
