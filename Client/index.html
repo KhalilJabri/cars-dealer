@@ -4,33 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CKEI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav>
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Cars</a></li>
-            <li><a href="#">Contacs Us</a></li>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
-
-        <ul>
-            <li><a href="#">C K E I</a></li>
-            <li class="hideOnMobile"><a href="#">Home</a></li>
-            <li class="hideOnMobile"><a href="#">Cars</a></li>
-            <li class="hideOnMobile"><a href="#">Contacs Us</a></li>
-            <li class="hideOnMobile"><a href="#">Register</a></li>
-            <li class="hideOnMobile"><a href="#">Login</a></li>
-            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-        </ul>
-        
-    </nav>
     <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Contacs Us</a></li>
+                <li><a href="#">Join us</a></li>
+            </ul>
+    
+            <ul>
+                <li><a href="#">C K E I</a></li>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">Cars</a></li>
+                <li class="hideOnMobile"><a href="#">Contacs Us</a></li>
+                <li class="hideOnMobile joinStyle"><a href="#">Join us</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            
+        </nav>
+        <div class="greetingContainer">
+            <p class="greetingInfo">Welcome to</p>
+            <p class="greetingValue">CKEI PLACE</p>
+            <div class="greetingBtn">
+                <p>Look cars</p>
+            </div>
+        </div>
 
     </header>
+    <main>
+        <div class="globalInfo">
+            <div class="globalInfoCont">
+                <div class="nameCarContainer">
+                    <h1 class="nameCar">Mercedes-Benz</h1>
+                </div>
+                <div class="descContainerCont">
+                    <div class="descContainer">
+                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel nulla ac turpis porta commodo eget sit amet sapien. Vivamus finibus nibh et sollicitudin pretium. In mollis erat non tellus.</p>
+                    </div>
+                </div>
+    
+                <div class="optionsContainer">
+                    <div class="firstContainer">
+                        <div class="firstOption">
+                            <img src="./image/compteur-de-vitesse.png" />
+                            <p class="vitesseValue">190 Km/h</p>
+                        </div>
+                        <div class="secondOption">
+                            <img src="./image/moteur-turbo.png" />
+                            <p class="turboValue">220 KM</p>
+                        </div>
+                    </div>
+                    <div class="secondContainer">
+                        <div class="thirdOption">
+                            <img src="./image/manual-transmission.png" />
+                            <p class="transmissionValue">Manual</p>
+                        </div>
+                        <div class="fourthOption">
+                            <img src="./image/gas-station.png" />
+                            <p class="gasValue">EV</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="priceButton">
+                    <div class="globalBtn">
+                        <p class="globalBtnText">Rent now</p>
+                        <img src="./image/next.png" alt="arrow" />
+                    </div>
+                    <div class="globalPrice">
+                        <p class="globalPriceValue">149 DT</p>
+                        <p class="globalPriceInfo">per day</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="containImage">
+            <div class="imageContainer">
+                <img class="carImage" src="./image/pngfind.com-car-front-png-218600.png" alt="car image"/>
+            </div>
+            <div class="arrowContainer">
+                <div onclick=previousCar() class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                </div>
+                <div onclick=nextCar() class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                </div>
+
+            </div>
+        </div>
+    </main>
 
     <script src="./js/script.js"></script>
 </body>

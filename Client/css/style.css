@@ -2,14 +2,26 @@
     margin: 0;
     padding: 0;
 }
-
+/* ------------------------- header --------------------------------- */
 header {
-    background-image: url(../image/wallpaperflare.com_wallpaper.jpg);
-    min-height: 100vh;
+    position: relative;
+    height: 100vh;
+  }
+  
+  header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../image/beautiful-mountain-road-landscape.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-}
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    z-index: -1;
+  }
 
 nav {
     width: 100%;
@@ -25,7 +37,12 @@ nav ul {
 
 nav li {
     height: 50px;
+    font-size: 1.2rem;
 }
+
+header nav ul li a {
+    color: white;
+  }
 
 nav a {
     height: 100%;
@@ -37,7 +54,19 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #f0f0f0;
+    color: #fd3e04;
+    transition: .2s;
+}
+
+nav ul li:nth-last-child(2):hover {
+    background-color: #59595953;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.joinStyle {
+    padding: 0 20px;
+    margin-left: 30px;
 }
 
 nav li:first-child {
@@ -72,10 +101,197 @@ nav li:first-child {
     display: none;
 }
 
+.svgIcon {
+    fill: white;
+}
+
+.greetingContainer {
+    /* background-color: aquamarine; */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.greetingInfo {
+    font-size: 5rem;
+    font-family: 'Dancing Script', cursive;
+    /* background-color: blue; */
+    color: white;
+}
+
+.greetingValue {
+    /* background-color: red; */
+    font-size: 5rem;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 20px;
+    color: white;
+    letter-spacing: 20px;
+}
+
+.greetingBtn {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.greetingBtn p {
+    color: #fd3e04;
+}
+
+/* ----------------------- main ---------------------------- */
+
+main {
+    min-height: 100vh;
+    display: flex;
+}
+
+.globalInfo {
+    background-color: #f2f2f2;
+}
+
+.globalInfoCont {
+    /* background-color: red; */
+    padding-left: 20%;
+}
+
+.nameCarContainer {
+    padding-top: 20px;
+}
+
+.nameCar {
+    font-size: 4rem;
+}
+
+.descContainerCont {
+    padding: 40px 0;
+    /* border-bottom: 1px solid #595959; */
+}
+
+.descContainer {
+    width: 70%;
+}
+
+.desc {
+    font-size: 1.3rem;
+    color: #595959;
+}
+
+.optionsContainer {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.optionsContainer img {
+    width: 30px;
+}
+
+.optionsContainer p {
+    font-size: 1.4rem;
+    color: #595959;
+    padding-left: 10px;
+}
+
+.firstOption, .secondOption, .thirdOption, .fourthOption {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.priceButton {
+    display: flex;
+    margin-top: 20%;
+}
+
+.globalBtn {
+    background-color: #fd3e04;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 15px 25px;
+    margin-right: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.globalBtnText {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.globalBtn img {
+    width: 20px;
+}
+
+.globalPrice {
+
+}
+
+.globalPriceValue {
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.globalPriceInfo {
+    color: #595959;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
 
 
+
+.containImage {
+    width: 100%;
+}
+
+.imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.carImage {
+    width: 80%;
+    opacity: 0; /* Initially hide the image */
+    transition: opacity 2s ease; /* Apply transition to opacity property */
+}
+  
+.carImage.loaded {
+    opacity: 1; /* Show the image when loaded */
+}
+
+.arrowContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.arrow {
+    border-radius: 50%;
+    border: 3px solid #fd3e04;
+    padding: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+
+
+/* ------------------------- responsive -------------------------- */
 
 @media(max-width: 800px) {
+    
+    nav ul li:first-child a {
+        color: black;
+    }
+
     .hideOnMobile {
         display: none;
     }
@@ -86,7 +302,7 @@ nav li:first-child {
 
 }
 
-@media(max-width: 350px) {
+@media(max-width: 400px) {
     .sidebar {
         width: 100%;
     }
