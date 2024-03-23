@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 /* ------------------------- header --------------------------------- */
 header {
@@ -16,7 +17,6 @@ header {
     width: 100%;
     height: 100%;
     background-image: url("../image/beautiful-mountain-road-landscape.jpg");
-    /* background-image: url("../image/carrental2-sectionbg1.jpg"); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -297,9 +297,6 @@ section {
     font-weight: 700;
 }
 
-
-
-
 .containImage {
     width: 100%;
 }
@@ -335,6 +332,102 @@ section {
     padding: 10px;
     margin-left: 20px;
     cursor: pointer;
+}
+
+.homeInfo {
+    background-image: url("../image/carrental2-sectionbg1.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 15% 0 15%;
+}
+
+.infoTitle {
+    padding: 5% 0;
+}
+
+.inforTitleValue {
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.elements {
+    display: flex;
+}
+
+.elementTitleContainer {
+    padding-top: 10px;
+    height: 70px;
+}
+
+.elementTitle {
+    font-size: 1.5rem;
+    color: #fd3e04;
+    font-weight: bold;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.elementDescContainer {
+    padding: 20px 0;
+}
+
+.elementDesc {
+    font-size: 1.5rem;
+    color: white;
+    width: 80%;
+}
+
+.moreInfo {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #59595945;
+}
+
+.brandContainer {
+    padding-right: 150px;
+}
+
+.brandName {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fd3e04;
+}
+
+.addressContainer {
+    padding-right: 150px;
+    width: 250px;
+}
+
+.addressValue {
+    font-size: 1.2rem;
+    color: #595959;
+    font-weight: 100;
+}
+
+.contactContainer {
+
+}
+
+.tel {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.tel span{
+    color: #fd3e04;
+}
+
+.email {
+    font-size: 1.5rem;
+    padding-top: 10px;
+    color: #595959;
 }
 
 
