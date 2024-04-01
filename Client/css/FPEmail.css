@@ -94,4 +94,62 @@ a {
     color: #262626;
     font-size: 1em;
     font-weight: 500;
+    background-color: transparent;
+    border-width: 0px;
+}
+
+.button button {
+    color: #262626;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: transparent;
+    border-width: 0px;
+    cursor: pointer;
+}
+
+
+.message {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.message  p { 
+    font-size: 0.9rem;
+    color: white;   
+}
+
+.message a {
+    border-bottom: 1px solid #fd3e04;
+}
+
+.message a:hover {
+    color: #fd3e04;
+    cursor: pointer;
+}
+
+/* ----------- for mobile screen ------------- */
+
+@media (max-width: 400px) {
+    .loginContainer {
+        width: 340px;
+    }
+}
+
+/* ------------- for  tablet screen -------------------- */
+
+@media (max-width: 1023px) {
+
+}
+
+/* --------------- for laptop devices and landscape --------------- */
+
+@media (max-width: 1439px) {
+    
+}
+
+/* ----------------- desktop devices ------------------ */
+
+@media (min-width: 1440px) {
+    
 }

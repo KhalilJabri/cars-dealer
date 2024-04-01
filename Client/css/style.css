@@ -2,14 +2,16 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    /* background-color: red; */
 }
+
 /* ------------------------- header --------------------------------- */
 header {
     position: relative;
     height: 100vh;
-  }
-  
-  header:before {
+}
+
+header:before {
     content: "";
     position: absolute;
     top: 0;
@@ -22,7 +24,7 @@ header {
     background-repeat: no-repeat;
     filter: blur(3px);
     z-index: -1;
-  }
+}
 
 nav {
     width: 100%;
@@ -43,7 +45,7 @@ nav li {
 
 header nav ul li a {
     color: white;
-  }
+}
 
 nav a {
     height: 100%;
@@ -107,7 +109,6 @@ nav li:first-child {
 }
 
 .greetingContainer {
-    /* background-color: aquamarine; */
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -118,12 +119,10 @@ nav li:first-child {
 .greetingInfo {
     font-size: 5rem;
     font-family: 'Dancing Script', cursive;
-    /* background-color: blue; */
     color: white;
 }
 
 .greetingValue {
-    /* background-color: red; */
     font-size: 5rem;
     font-family: "Anton", sans-serif;
     font-weight: 400;
@@ -131,6 +130,7 @@ nav li:first-child {
     padding-bottom: 20px;
     color: white;
     letter-spacing: 20px;
+    text-align: center;
 }
 
 .greetingBtn {
@@ -149,6 +149,7 @@ nav li:first-child {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-100%);
     }
@@ -164,7 +165,7 @@ nav li:first-child {
     display: flex;
     /* align-items: center; */
     overflow: hidden;
-    padding: 60px 0 ;
+    padding: 60px 0;
     position: relative;
 }
 
@@ -201,6 +202,7 @@ nav li:first-child {
 section {
     min-height: 100vh;
     display: flex;
+    /* background-color: red; */
 }
 
 .globalInfo {
@@ -208,7 +210,6 @@ section {
 }
 
 .globalInfoCont {
-    /* background-color: red; */
     padding-left: 20%;
 }
 
@@ -249,7 +250,10 @@ section {
     padding-left: 10px;
 }
 
-.firstOption, .secondOption, .thirdOption, .fourthOption {
+.firstOption,
+.secondOption,
+.thirdOption,
+.fourthOption {
     display: flex;
     align-items: center;
     margin-right: 50px;
@@ -282,9 +286,7 @@ section {
     width: 20px;
 }
 
-.globalPrice {
-
-}
+.globalPrice {}
 
 .globalPriceValue {
     font-size: 2.3rem;
@@ -311,13 +313,16 @@ section {
 
 .carImage {
     width: 80%;
-    opacity: 0; /* Initially hide the image */
-    transition: opacity 2s ease; /* Apply transition to opacity property */
+    opacity: 0;
+    /* Initially hide the image */
+    transition: opacity 2s ease;
+    /* Apply transition to opacity property */
     mix-blend-mode: color-burn;
 }
-  
+
 .carImage.loaded {
-    opacity: 1; /* Show the image when loaded */
+    opacity: 1;
+    /* Show the image when loaded */
 }
 
 .arrowContainer {
@@ -388,6 +393,7 @@ section {
     justify-content: center;
     align-items: center;
     background-color: #59595945;
+
 }
 
 .brandContainer {
@@ -411,16 +417,14 @@ section {
     font-weight: 100;
 }
 
-.contactContainer {
-
-}
+.contactContainer {}
 
 .tel {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.tel span{
+.tel span {
     color: #fd3e04;
 }
 
@@ -436,8 +440,12 @@ section {
 /* ------------------------- responsive -------------------------- */
 
 @media(max-width: 800px) {
-    
+
     nav ul li:first-child a {
+        color: black;
+    }
+
+    .sidebar a {
         color: black;
     }
 
@@ -449,10 +457,179 @@ section {
         display: block;
     }
 
-}
-
-@media(max-width: 400px) {
     .sidebar {
         width: 100%;
     }
+
+    .nameCar {
+        font-size: 3rem;
+    }
+
+    section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .globalInfoCont {
+        padding-left: 10%;
+    }
+
+    .priceButton {
+        display: flex;
+        margin-top: 10%;
+        justify-content: center;
+    }
+
+    .globalBtn {
+        padding: 10px 15px;
+    }
+
+    .globalPrice {
+        text-align: center;
+    }
+
+
+    .containImage {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .imageContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        overflow: hidden;
+    }
+
+    .carImage {
+        width: 500px;
+        opacity: 0;
+        /* Initially hide the image */
+        transition: opacity 2s ease;
+        /* Apply transition to opacity property */
+        mix-blend-mode: color-burn;
+        margin-left: 10%;
+    }
+
+    .carImage.loaded {
+        opacity: 1;
+        /* Show the image when loaded */
+    }
+
+    .arrowContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .arrow {
+        border-radius: 50%;
+        border: 3px solid #fd3e04;
+        padding: 10px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+
 }
+
+/* ----------- for mobile screen ------------- */
+
+@media(max-width: 500px) {
+    .homeInfo {
+        background-image: url("../image/carrental2-sectionbg1.jpg");
+        height: 100% ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 0 15% 0 10%;
+    }
+
+    .infoTitle {
+        padding: 5% 0;
+    }
+
+    .inforTitleValue {
+        font-size: 2.5rem;
+        color: white;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .elements {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .elementTitleContainer {
+        padding-top: 10px;
+        height: 70px;
+    }
+
+    .elementTitle {
+        font-size: 1.5rem;
+        color: #fd3e04;
+        font-weight: bold;
+        width: 70%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .elementDescContainer {
+        padding: 20px 0;
+    }
+
+    .elementDesc {
+        font-size: 1.5rem;
+        color: white;
+        width: 80%;
+    }
+
+    .moreInfo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .addressContainer {
+        margin-top: 30px;
+        padding-right: 0px;
+        text-align: center;
+    }
+    
+    .brandContainer {
+        padding-right: 0px;
+    }
+
+    .contactContainer {
+        margin-top: 30px;
+    }
+
+    
+
+}
+
+/* ------------- for  tablet screen -------------------- */
+
+@media (max-width: 1023px) {
+    section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .priceButton {
+        margin-top: 10%;
+    }
+}
+
+/* --------------- for laptop devices and landscape --------------- */
+
+@media (max-width: 1439px) {}
+
+/* ----------------- desktop devices ------------------ */
+
+@media (min-width: 1440px) {}

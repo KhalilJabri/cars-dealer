@@ -7,7 +7,7 @@
     <title>CKEI - ForgotPassword</title>
     <link rel="stylesheet" href="../css/FPEmail.css">
     <!-- <link rel="website icon" type="png" href="../image/beautiful-mountain-road-landscape.jpg"> -->
-    <!-- <script src="../js/login.js"></script> -->
+    <script src="../js/ForgotPassword.js"></script>
 </head>
 
 <body>
@@ -17,21 +17,29 @@
                 <div class="option">
                     <p>Find your CKEI account</p>
                 </div>
-                <div class="conatainer">
-                    <div class="inputContainer">
-                        <div class="emailPasswordInput">
-                            <img src="../image/envelope.png">
-                            <input placeholder="Email ID" type="email">
+                <form method="post">
+                    <div class="conatainer">
+                        <div class="inputContainer">
+                            <div class="emailPasswordInput">
+                                <img src="../image/envelope.png">
+                                <input placeholder="Email ID" type="email" id="email" name="email" required>
+                            </div>
                         </div>
-                    </div>
+        
+                        <div class="buttonContainer">
+                            <!-- <a href="../html/FPCode.html"> -->
+                                <div class="button">
+                                    <!-- <button type="button">Send</button> -->
+                                    <a href="../html/FPCode.html">Send</a>
+                                </div>
+                            <!-- </a> -->
+                        </div>
+                        <div class="message">
+                            <p>you want to return to <a href="../html/login.html">Login</a></p>
+                        </div>
     
-                    <div class="buttonContainer">
-                        <div class="button">
-                            <a href="../html/FPCode.html">Send</a>
-                        </div>
                     </div>
-
-                </div>
+                </form>
             </div>
 
         </div>
