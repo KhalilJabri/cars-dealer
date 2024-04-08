@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKEI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/CarDetails.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="./login.html">Join us</a></li>
+            </ul>
+    
+            <ul>
+                <li><a href="#">C K E I</a></li>
+                <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="#">Cars</a></li>
+                <li class="hideOnMobile"><a href="#aboutUs">About Us</a></li>
+                <li class="hideOnMobile joinStyle"><a href="./login.html">Join us</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <section>
+        <div class="carContainer">
+            <div class="firstObject">
+                <div class="nameCarContainer">
+                    <p id="nameCar">Creta Hyndai</p>
+                </div>
+                <div class="details">
+                    <div class="imageContainer">
+                        <img src="../image/pngfind.com-car-front-png-218600.png" alt="car_Image" id="mainImage" />
+                    </div>
+                    <div class="moreDetails">
+                        <div class="descContainer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel nulla ac turpis porta
+                                commodo eget sit amet sapien. Vivamus finibus nibh et sollicitudin pretium. In mollis
+                                erat non tellus.</p>
+                        </div>
+                        <div class="optionsContainer">
+                            <div class="firstContainer">
+                                <div class="option">
+                                    <img src="../image/compteur-de-vitesse.png" />
+                                    <p class="vitesseValue">190 Km/h</p>
+                                </div>
+                                <div class="option">
+                                    <img src="../image/moteur-turbo.png" />
+                                    <p class="turboValue">220 KM</p>
+                                </div>
+                            </div>
+                            <div class="secondContainer">
+                                <div class="option">
+                                    <img src="../image/manual-transmission.png" />
+                                    <p class="transmissionValue">Manual</p>
+                                </div>
+                                <div class="option">
+                                    <img src="../image/gas-station.png" />
+                                    <p class="gasValue">EV</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="information">
+                <img src="../image/check.png" />
+                <p>Instant Confirmation: This vehicule is available  for renting now!</p>
+            </div>
+            <div class="secondObject">
+                <div class="rentDetails">
+                    <p>Rental Details</p>
+                </div>
+                <div class="dateTime">
+                    <div class="startDate">
+                        <label for="dateDebut" style="padding-bottom: 10px">pick-up date</label>
+                        <input class="input-date" type="datetime-local" id="datePicker" name="dateDropOff" />
+                    </div>
+                    <div class="endDate">
+                        <label for="dateDebut" style="padding-bottom: 10px">deposit date</label>
+                        <input class="input-date" type="datetime-local" id="datePicker" name="dateDropOff" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reservationForm">
+            <div class="titlePrice">
+                <p>Price Summary</p>
+            </div>
+
+            <div class="timeDetails">
+                <div class="timePickUp">
+                    <p class="timeTitle">pick-up</p>
+                    <p>March 11, 2024 at 8:30 AM</p>
+                </div>
+                <div class="timeDropOff">
+                    <p class="timeTitle">drop-off</p>
+                    <p>March 31, 2024 at 8:30 AM</p>
+                </div>
+            </div>
+
+            
+            <hr class="xx" style="margin:30px auto 0;">
+            <div>
+                <div class="priceContainer">
+                    <p class="priceLabel">Total Amount</p>
+                    <p id="totalPrice">210 DT</p>
+                </div>
+
+                <div class="btnContainer">
+                    <div class="btn">
+                        <p>Book Now</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
