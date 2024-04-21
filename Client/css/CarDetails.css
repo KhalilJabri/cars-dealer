@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e6e6e6;
+    /* background-color: #f2f2f2; */
+}
+
+/* ------------------------- header --------------------------------- */
+nav {
+    width: 100%;
+    display: inline-block;
+    background-color: white;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+header nav ul li a {
+    color: #4d4d4d;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav a:hover {
+    color: #fd3e04;
+    transition: .2s;
+}
+
+nav ul li:nth-last-child(2):hover {
+    background-color: #59595953;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.joinStyle {
+    padding: 0 20px;
+    margin-left: 30px;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+.svgIcon {
+    fill: white;
+}
+
+/* --------------------------- Section --------------------------- */
+
+section {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 30px 7% 0px 7%;
+
+}
+
+.carContainer {
+    width: 55%;
+    margin-right: 40px;
+}
+
+.firstObject {
+    background-color: white;
+    border-radius: 10px;
+    height: 45vh;
+    padding-top: 30px;
+}
+
+.nameCarContainer {
+    margin-left: 50px;
+}
+
+#nameCar {
+    font-size: 2rem;
+    color: #fd3e04;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.details {
+    display: flex;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.imageContainer {
+    width: 700px;
+    height: 200px;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.descContainer {
+    width: 90%;
+}
+
+.moreDetails {
+    padding-left: 30px;
+}
+
+.optionsContainer {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.optionsContainer img {
+    width: 30px;
+}
+
+.optionsContainer p {
+    font-size: 1.4rem;
+    color: #595959;
+    padding-left: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.information {
+    background-color: #fed8cd;
+    display: flex;
+    margin: 15px auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.information p {
+    color: #fd3e04;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.secondObject {
+    background-color: white;
+    border-radius: 10px;
+    /* width: 55%; */
+    height: 20vh;
+    padding-top: 20px;
+    margin-top: 15px;
+}
+
+.rentDetails {
+    margin-left: 50px;
+}
+
+.rentDetails p {
+    font-size: 1.7rem;
+    color: #fd3e04;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.dateTime {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px;
+}
+
+.startDate,
+.endDate {
+    display: flex;
+    flex-direction: column;
+}
+
+.dateDebut {
+    padding-bottom: 10px;
+    /* margin-bottom: 10px; */
+}
+
+.input-date {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #fd3e04;
+    border-radius: 5px;
+}
+
+.input-date::placeholder {
+    color: yellow;
+}
+
+.input-date:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.reservationForm {
+    background-color: white;
+    border-radius: 10px;
+    width: 25%;
+    height: 50vh;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.titlePrice {
+    /* margin-left: 50px; */
+}
+
+.titlePrice p {
+    font-size: 1.7rem;
+    color: #fd3e04;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.timeDetails {
+    border-left: 1px solid #fe9e81;
+    position: relative;
+    margin-top: 20px;
+}
+
+.timePickUp {
+    padding-left: 20px;
+}
+
+.timePickUp::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+    left: -7px;
+    top: -10;
+    background: #fff;
+    border: 2px solid #fe9e81;
+}
+
+.timeDropOff {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.timeDropOff::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+    left: -9px;
+    top: 1;
+    background: #fff;
+    border: 2px solid #fe9e81;
+}
+
+.timeTitle {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fd3e04;
+    position: relative;
+    bottom: 4px;
+}
+
+.xx {
+    width: 90%;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.priceLabel {
+    font-weight: 700;
+}
+
+#totalPrice {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.btnContainer {
+    background-color: #fd6435;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    /* transition: all .3s ease; */
+    cursor: pointer;
+}
+
+.btn {}
+
+.btn p {
+    color: white;
+    font-weight: bold;
+}

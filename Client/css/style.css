@@ -1,14 +1,28 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
+/* ------------------------- header --------------------------------- */
 header {
-    background-image: url(../image/wallpaperflare.com_wallpaper.jpg);
-    min-height: 100vh;
+    position: relative;
+    height: 100vh;
+}
+
+header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../image/beautiful-mountain-road-landscape.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    z-index: -1;
 }
 
 nav {
@@ -25,6 +39,11 @@ nav ul {
 
 nav li {
     height: 50px;
+    font-size: 1.2rem;
+}
+
+header nav ul li a {
+    color: white;
 }
 
 nav a {
@@ -37,7 +56,19 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #f0f0f0;
+    color: #fd3e04;
+    transition: .2s;
+}
+
+nav ul li:nth-last-child(2):hover {
+    background-color: #59595953;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.joinStyle {
+    padding: 0 20px;
+    margin-left: 30px;
 }
 
 nav li:first-child {
@@ -72,10 +103,351 @@ nav li:first-child {
     display: none;
 }
 
+.svgIcon {
+    fill: white;
+}
+
+.greetingContainer {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.greetingInfo {
+    font-size: 5rem;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+
+.greetingValue {
+    font-size: 5rem;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 20px;
+    color: white;
+    letter-spacing: 20px;
+    text-align: center;
+}
+
+.greetingBtn {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.greetingBtn p {
+    color: #fd3e04;
+}
+
+/* ----------------------- main ---------------------------- */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logoContainer:hover .logo-slide {
+    animation-play-state: paused;
+}
+
+.logoContainer {
+    background-color: #0F0F0F;
+    /* height: 150px; */
+    display: flex;
+    /* align-items: center; */
+    overflow: hidden;
+    padding: 60px 0;
+    position: relative;
+}
+
+/* .logoContainer::before, .logoContainer::after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+} 
+
+.logoContainer::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255 , 255, 0), white);
+}
+
+.logoContainer::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255 , 255, 0), white);
+} */
+
+.logo-slide {
+    white-space: nowrap;
+    animation: 25s slide infinite linear;
+}
+
+.logo-slide img {
+    height: 75px;
+    margin: 0 40px;
+}
 
 
+section {
+    min-height: 100vh;
+    display: flex;
+    /* background-color: red; */
+}
+
+.globalInfo {
+    background-color: #f2f2f2;
+}
+
+.globalInfoCont {
+    padding-left: 20%;
+}
+
+.nameCarContainer {
+    padding-top: 20px;
+}
+
+.nameCar {
+    font-size: 4rem;
+}
+
+.descContainerCont {
+    padding: 40px 0;
+    /* border-bottom: 1px solid #595959; */
+}
+
+.descContainer {
+    width: 70%;
+}
+
+.desc {
+    font-size: 1.3rem;
+    color: #595959;
+}
+
+.optionsContainer {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.optionsContainer img {
+    width: 30px;
+}
+
+.optionsContainer p {
+    font-size: 1.4rem;
+    color: #595959;
+    padding-left: 10px;
+}
+
+.firstOption,
+.secondOption,
+.thirdOption,
+.fourthOption {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.priceButton {
+    display: flex;
+    margin-top: 20%;
+}
+
+.globalBtn {
+    background-color: #fd3e04;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 15px 25px;
+    margin-right: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.globalBtnText {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.globalBtn img {
+    width: 20px;
+}
+
+.globalPrice {}
+
+.globalPriceValue {
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.globalPriceInfo {
+    color: #595959;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.containImage {
+    width: 100%;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.carImage {
+    width: 80%;
+    opacity: 0;
+    /* Initially hide the image */
+    transition: opacity 2s ease;
+    /* Apply transition to opacity property */
+    mix-blend-mode: color-burn;
+}
+
+.carImage.loaded {
+    opacity: 1;
+    /* Show the image when loaded */
+}
+
+.arrowContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.arrow {
+    border-radius: 50%;
+    border: 3px solid #fd3e04;
+    padding: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.homeInfo {
+    background-image: url("../image/carrental2-sectionbg1.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 15% 0 15%;
+}
+
+.infoTitle {
+    padding: 5% 0;
+}
+
+.inforTitleValue {
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.elements {
+    display: flex;
+}
+
+.elementTitleContainer {
+    padding-top: 10px;
+    height: 70px;
+}
+
+.elementTitle {
+    font-size: 1.5rem;
+    color: #fd3e04;
+    font-weight: bold;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.elementDescContainer {
+    padding: 20px 0;
+}
+
+.elementDesc {
+    font-size: 1.5rem;
+    color: white;
+    width: 80%;
+}
+
+.moreInfo {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #59595945;
+
+}
+
+.brandContainer {
+    padding-right: 150px;
+}
+
+.brandName {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fd3e04;
+}
+
+.addressContainer {
+    padding-right: 150px;
+    width: 250px;
+}
+
+.addressValue {
+    font-size: 1.2rem;
+    color: #595959;
+    font-weight: 100;
+}
+
+.contactContainer {}
+
+.tel {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.tel span {
+    color: #fd3e04;
+}
+
+.email {
+    font-size: 1.5rem;
+    padding-top: 10px;
+    color: #595959;
+}
+
+
+
+
+/* ------------------------- responsive -------------------------- */
 
 @media(max-width: 800px) {
+
+    nav ul li:first-child a {
+        color: black;
+    }
+
+    .sidebar a {
+        color: black;
+    }
+
     .hideOnMobile {
         display: none;
     }
@@ -84,10 +456,179 @@ nav li:first-child {
         display: block;
     }
 
-}
-
-@media(max-width: 350px) {
     .sidebar {
         width: 100%;
     }
+
+    .nameCar {
+        font-size: 3rem;
+    }
+
+    section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .globalInfoCont {
+        padding-left: 10%;
+    }
+
+    .priceButton {
+        display: flex;
+        margin-top: 10%;
+        justify-content: center;
+    }
+
+    .globalBtn {
+        padding: 10px 15px;
+    }
+
+    .globalPrice {
+        text-align: center;
+    }
+
+
+    .containImage {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .imageContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        overflow: hidden;
+    }
+
+    .carImage {
+        width: 500px;
+        opacity: 0;
+        /* Initially hide the image */
+        transition: opacity 2s ease;
+        /* Apply transition to opacity property */
+        mix-blend-mode: color-burn;
+        margin-left: 10%;
+    }
+
+    .carImage.loaded {
+        opacity: 1;
+        /* Show the image when loaded */
+    }
+
+    .arrowContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .arrow {
+        border-radius: 50%;
+        border: 3px solid #fd3e04;
+        padding: 10px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+
 }
+
+/* ----------- for mobile screen ------------- */
+
+@media(max-width: 500px) {
+    .homeInfo {
+        background-image: url("../image/carrental2-sectionbg1.jpg");
+        height: 100% ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 0 15% 0 10%;
+    }
+
+    .infoTitle {
+        padding: 5% 0;
+    }
+
+    .inforTitleValue {
+        font-size: 2.5rem;
+        color: white;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .elements {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .elementTitleContainer {
+        padding-top: 10px;
+        height: 70px;
+    }
+
+    .elementTitle {
+        font-size: 1.5rem;
+        color: #fd3e04;
+        font-weight: bold;
+        width: 70%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .elementDescContainer {
+        padding: 20px 0;
+    }
+
+    .elementDesc {
+        font-size: 1.5rem;
+        color: white;
+        width: 80%;
+    }
+
+    .moreInfo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .addressContainer {
+        margin-top: 30px;
+        padding-right: 0px;
+        text-align: center;
+    }
+    
+    .brandContainer {
+        padding-right: 0px;
+    }
+
+    .contactContainer {
+        margin-top: 30px;
+    }
+
+    
+
+}
+
+/* ------------- for  tablet screen -------------------- */
+
+@media (max-width: 1023px) {
+    section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .priceButton {
+        margin-top: 10%;
+    }
+}
+
+/* --------------- for laptop devices and landscape --------------- */
+
+@media (max-width: 1439px) {}
+
+/* ----------------- desktop devices ------------------ */
+
+@media (min-width: 1440px) {}

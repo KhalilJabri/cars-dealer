@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    background-image: url("../image/carrental2-sectionbg1.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .xx { */
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: center; */
+/* } */
+
+.loginContainer {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    width: 400px;
+    height: 400px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.joinOptions {
+    display: flex;
+}
+
+.option {
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    padding: 10px 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.activeLogin {
+    font-size: 2em;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    box-shadow: rgba(255, 255, 255, 0.7) -5px 7px 10px, rgba(0, 0, 0, 0.22) 10px 15px 12px;
+}
+
+.activeRegister {
+    font-size: 2em;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    box-shadow: rgba(255, 255, 255, 0.7) 5px 7px 10px, rgba(0, 0, 0, 0.22) 10px 15px 12px;
+}
+
+.loginCont {
+    display: block;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.emailPasswordInput {
+    position: relative;
+    width: 75%;
+    margin-top: 30px;
+}
+
+.emailPasswordInput input {
+    padding-left: 20px;
+    height: 45px;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+}
+
+.emailPasswordInput input::placeholder {
+    color: white;
+}
+
+.emailPasswordInput img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox p, a {
+    display: inline-block;
+    color: white;
+    font-size: 0.8em;
+    font-weight: 100;
+}
+
+.checkbox p {
+    padding-left: 4px;
+    /* font-weight: bold; */
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: 45px;
+    background-color: white;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.button a {
+    color: #262626;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+/* .register {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+    color: white;
+}
+
+.register p {
+    
+    padding-right: 4px;
+    font-size: 0.65em;
+}
+
+.register a {
+    font-weight: 400;
+    font-size: 0.8em;
+} */
+
+.registerCont {
+    display: none;
+}
+
+.userName {
+    display: flex;
+    margin-top: 20px;
+}
+
+.inputValue {
+    font-size: 0.9rem;
+    color: white;
+    padding-left: 5px;
+}
+
+.firstNameInput {
+    margin-left: 10px;
+}
+
+.nameInput {
+    height: 30px;
+    width: 90%;
+    margin-top: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+}
+
+.nameInput::placeholder {
+    color: white;
+}
+
+.inputContainerRegister {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 0 10px;
+}
+
+.inputType {
+    padding: 10px 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+    padding-left: 20px;
+}
+
+.inputType::placeholder {
+    color: white;
+}
+
+.btnRegisterContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.btnRegister {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: 45px;
+    background-color: white;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btnRegister a {
+    color: #262626;
+    font-size: 1em;
+    font-weight: 500;
+}
