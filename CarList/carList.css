@@ -1,0 +1,255 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(../image/wallpaperflare.com_wallpaper.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav {
+    width: 100%;
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+
+
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+}
+
+@media(max-width: 350px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+/** header **/
+
+.carListHeader {
+    height: 100px;
+   background-image: url(./Image/How\ to\ Minimize\ Drop-Off\ Fees\ on\ One\ Way\ Car\ Rentals\ in\ Europe.jpeg);
+   background-size:cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   padding: 0;
+}
+.CarListHeaderTitle{
+    color: #fff;
+    padding:  25% 5% 25%;
+    font-size: 55px;
+    font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+/** header **/
+
+/***CarDetails**/
+.CarlistContainer{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    
+}
+.carImg{
+   flex: 1;
+}
+.carImg img{
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.carDetails{
+    flex: 1;
+    padding: 0px 22px 151px 0;
+}
+.CarBrand{
+    padding: 0 0 50px;
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    font-family: "Krona One", Helvetica, Arial, sans-serif;
+}
+.CarDescription{
+    color: #8a8989;
+    margin: 0 0 15px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+}
+
+.CarInfo{
+
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+   
+}
+
+.carPrice{
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    font-family:" KronaOne";
+    padding-left: 45%;
+    padding-top: 30px;
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.iconContainer{
+    display: flex;
+    padding-top: 60px;
+    align-items: center;
+    padding-left: 40px;
+}
+.iconInfo{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-right: 50px; 
+    padding-left: 20px;
+
+
+}
+.iconInfo p {
+    margin-top: 25px;
+}
+.buttonContainer{
+    padding: 70px 20px 20px 20px;
+}
+.button{
+background-color: orange;
+font-size: 20px;
+width: 20%;
+border: 1px ;
+color: #fff;
+cursor: pointer;
+padding: 10px 10px 10px 10px;
+font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.button:hover{
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+
+}
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
+.seperateLine{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+/**EndCarDetails**/
+/***Footer***/
+.footer{
+    background-color: #f7f7f7;
+    background-position: center top;
+    position: relative;
+    align-items: center;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 150px 200px;
+    
+}
+.column1, .column2, .column3{
+    font-size: 20px;
+    color: #555;
+    flex: 1;
+}
+.column3{
+    letter-spacing:  0.5px; ;
+}
+.column3 a {
+    text-decoration: none;
+    color: #555;
+}
+
+.column1 img{
+    width: 100px;
+
+   
+}
+.column1 h3{
+    font-size: 15px;
+  
+}
+/**EndFooter**/
