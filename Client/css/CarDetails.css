@@ -92,7 +92,7 @@ nav li:first-child {
 }
 
 .svgIcon {
-    fill: white;
+    fill: black;
 }
 
 /* --------------------------- Section --------------------------- */
@@ -349,4 +349,30 @@ section {
 .btn p {
     color: white;
     font-weight: bold;
+}
+
+/* ------------------------- responsive -------------------------- */
+
+@media(max-width: 800px) {
+
+    nav ul li:first-child a {
+        color: black;
+    }
+
+    .sidebar a {
+        color: #000000;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
 }
