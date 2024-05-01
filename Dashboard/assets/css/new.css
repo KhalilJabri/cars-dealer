@@ -1,0 +1,185 @@
+
+p{
+    margin: 0;
+}
+.main .page_loc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #cdddfe;
+    padding: 5px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.main .page_loc .nav{
+    display: flex;
+    list-style: none;
+}
+
+.main .page_loc .nav a{
+    text-decoration: none;
+    transition: .4s;
+    font-size: 14px;
+    color: #000;
+}
+
+.main .page_loc .nav a:hover{
+    text-decoration: underline;
+}
+.main .page_loc .nav span{
+    color: #fff;
+    margin: 0 5px;
+}
+.main .page_loc .date_time{
+    float: right;
+}
+
+.main .page_loc .date_time a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+.main .page_loc a i{
+    margin: 0 10px;
+    color: #000;
+    font-size: 14px;
+}
+
+.dashboard .info-card {
+    padding-bottom: 0px;
+}
+.main .card-body {
+    padding: 0 0 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.main .card_body_img{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .card_body_img img{
+    width: 80%;
+}
+.main .card_body_content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.main .card_body_content .amount{
+    font-size: 20px;
+}
+.main .card_body_content .card_name{
+    font-size: 12px;
+}
+
+
+.main .form_info{
+    background: #e3e9f6;
+}
+.main .table>:not(caption)>*>* {
+    background-color: #e3e9f6;
+}
+
+.main .form_info .form_infoTop_part{
+    background: #699bff;
+    margin-top: 30px;
+    padding: 10px 20px;
+}
+
+.main .form_info .form_infoTop_part .form_name p {
+    color: #fff;
+    font-size: 17px;
+}
+
+.main .form_info .form_infoTop_part i{
+    margin: 0 18px;  
+}
+
+.main .form_info .form_start{
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.main .form_info .form_part{
+    margin: 10px;
+}
+
+.main .form_info .form_part .label_name{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main .button{
+    background: #c5d4f3;
+    text-align: center;
+	padding: 20px 0;
+}
+.main .button a{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	text-decoration: none;
+	font-weight: 300;
+	background-color: #6f6ff3;
+	padding: 8px 12px;
+	display: inline-block;
+	color: #fff;
+	transition: .4s;
+}
+.main .button a:hover{
+	background-color: #699bff;
+    color: #fff;
+}
+
+.main .sub_button{
+    padding: 5px 10px;
+}
+.main .sub_button a{
+    color: #fff;
+    background: #609513;
+    padding: 8px 20px;
+    transition: .4s;
+}
+.main .sub_button a:hover{
+    background: #456a0c;
+}
+
+.main .edit_profile{
+    padding: 0 20px 0 0;
+}
+.main .edit_pro_list{
+    background: #eeeded;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+
+.main .subjects{
+    width: 500px;
+    /* height: 90px; */
+    background: #c5d4f3;
+    margin: 20px auto;
+    padding: 20px;
+}
+.main .subjects h1{
+    font-size: 20px;
+    font-weight: 400;
+    color: #605f5f;
+}
+.main .subjects p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+}
+.main .subjects:hover h1,
+.main .subjects:hover p{
+    text-decoration: underline;
+}
