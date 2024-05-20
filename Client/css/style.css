@@ -138,10 +138,20 @@ nav li:first-child {
     padding: 10px 20px;
     cursor: pointer;
 }
-
-.greetingBtn p {
-    color: #fd3e04;
+a.greetingBtnLink {
+    text-decoration: none;
+    color: yellow;
 }
+
+/* a.greetingBtnLink{
+    color: #fd3e04;
+    text-decoration: none;
+}  */
+
+/* .greetingBtnLink{
+    color: #fd3e04;
+    text-decoration: none;
+} */
 
 /* ----------------------- main ---------------------------- */
 @keyframes slide {

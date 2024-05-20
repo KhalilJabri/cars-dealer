@@ -1,3 +1,14 @@
+<?php
+    session_start();
+
+    $loggedIn= $_SESSION['loggedIn'] ?? false;
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,17 +27,25 @@
             <ul class="sidebar">
                 <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Cars</a></li>
+                <li><a href="./CarList/carList.php">Cars</a></li>
                 <li><a href="#aboutUs">About Us</a></li>
-                <li><a href="./html/login.html">Join us</a></li>
+                <?php if($loggedIn): ?>
+                    <li class="hideOnMobile joinStyle"><a href="./html/login.php">Hello, <?=$_SESSION['user']['prenom'] ?></a></li>
+                    <?php else: ?>
+                        <li class="hideOnMobile joinStyle"><a href="./html/login.php">Join us</a></li>
+                <?php endif ?>
             </ul>
     
             <ul>
                 <li><a href="#">C K E I</a></li>
                 <li class="hideOnMobile"><a href="#">Home</a></li>
-                <li class="hideOnMobile"><a href="#">Cars</a></li>
+                <li class="hideOnMobile"><a href="./CarList/carList.php">Cars</a></li>
                 <li class="hideOnMobile"><a href="#aboutUs">About Us</a></li>
-                <li class="hideOnMobile joinStyle"><a href="./html/login.html">Join us</a></li>
+                <?php if($loggedIn): ?>
+                    <li class="hideOnMobile joinStyle"><a href="./html/login.php">Hello, <?=$_SESSION['user']['prenom'] ?></a></li>
+                    <?php else: ?>
+                        <li class="hideOnMobile joinStyle"><a href="./html/login.php">Join us</a></li>
+                <?php endif ?>
                 <li class="menu-button" onclick=showSidebar()><a href="#"><svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             </ul>
             
@@ -35,7 +54,11 @@
             <p class="greetingInfo">Welcome to</p>
             <p class="greetingValue">CKEI PLACE</p>
             <div class="greetingBtn">
-                <p>Look cars</p>
+                <a class="greetingBtnLink" href="./CarList/carList.php">
+                    <!-- <p> -->
+                        Look cars
+                    <!-- </p> -->
+                </a>
             </div>
         </div>
 

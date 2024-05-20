@@ -1,3 +1,67 @@
+<?php
+session_start();
+
+require_once '../relation/database.php';
+
+$loggedIn = $_SESSION['loggedIn'] ?? false;
+
+$isRentRequest = ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['_method'] ?? '') === 'rent');
+
+if ($loggedIn) {
+    if ($isRentRequest) {
+      $id = $_POST['id'];
+    
+      $sql = 'INSERT INTO reservation (date_pick, date_drop, price, id_cli, id_voiture) values(date_pick = :date_pick, )';
+    
+      $stmt = $pdo->prepare($sql);
+    
+      $params = ['id' => $id];
+    
+      $stmt->execute($params);
+    
+      header('Location: ../CarList/carList.php');
+    }
+    header('Location: ./login.php');
+    exit;
+}
+
+
+// Get id from query string
+$id = $_GET['id'] ?? null;
+
+// If id is null, redirect to index.php
+if (!$id) {
+    header('Location: ../CarList/carList.php');
+    exit;
+}
+
+// SELECT statement with placeholder for id
+$sql = 'SELECT * FROM voiture WHERE id = :id';
+
+// Prepare the SELECT statement
+$stmt = $pdo->prepare($sql);
+
+// Params for prepared statement
+$params = ['id' => $id];
+
+// Execute the statement
+$stmt->execute($params);
+
+// Fetch the post from the database
+$carDetail = $stmt->fetch();
+
+// Fetch the post from the database
+// $carDetail = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$carDetail) {
+    // No rows found, redirect to carList
+    header('Location: ../CarList/carList.php');
+    exit();
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +72,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/CarDetails.css">
     <script src="../js/CarDetails.js"></script>
 
@@ -19,25 +82,30 @@
     <header>
         <nav>
             <ul class="sidebar">
-                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
-                            viewBox="0 -960 960 960" width="26">
-                            <path
-                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg></a></li>
-                <li><a href="#">Home</a></li>
+                <li><a href="../index.php">Home</a></li>
                 <li><a href="#">Cars</a></li>
-                <li><a href="#aboutUs">About Us</a></li>
-                <li><a href="./login.html">Join us</a></li>
+                <li><a href="../index.php#aboutUs">About Us</a></li>
+                <?php if ($loggedIn) : ?>
+                    <li class="hideOnMobile joinStyle"><a href="./login.php">Hello, <?= $_SESSION['user']['prenom'] ?></a></li>
+                <?php else : ?>
+                    <li class="hideOnMobile joinStyle"><a href="./login.php">Join us</a></li>
+                <?php endif ?>
             </ul>
 
             <ul>
                 <li><a href="#">C K E I</a></li>
-                <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="../index.php">Home</a></li>
                 <li class="hideOnMobile"><a href="#">Cars</a></li>
-                <li class="hideOnMobile"><a href="#aboutUs">About Us</a></li>
-                <li class="hideOnMobile joinStyle"><a href="./login.html">Join us</a></li>
-                <li class="menu-button" onclick=showSidebar()><a href="#"><svg class="svgIcon"
-                            xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                <li class="hideOnMobile"><a href="../index.php#aboutUs">About Us</a></li>
+                <?php if ($loggedIn) : ?>
+                    <li class="hideOnMobile joinStyle"><a href="./login.php">Hello, <?= $_SESSION['user']['prenom'] ?></a></li>
+                <?php else : ?>
+                    <li class="hideOnMobile joinStyle"><a href="./login.php">Join us</a></li>
+                <?php endif ?>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg class="svgIcon" xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
                             <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                         </svg></a></li>
             </ul>
@@ -49,37 +117,36 @@
         <div class="carContainer">
             <div class="firstObject">
                 <div class="nameCarContainer">
-                    <p id="nameCar">Creta Hyndai</p>
+                    <p id="nameCar"><?= $carDetail['marque'] ?> <?= $carDetail['model'] ?></p>
+
                 </div>
                 <div class="details">
                     <div class="imageContainer">
-                        <img src="../image/pngfind.com-car-front-png-218600.png" alt="car_Image" id="mainImage" />
+                        <img src=<?= $carDetail['picture'] ?> alt="car_Image" id="mainImage" />
                     </div>
                     <div class="moreDetails">
                         <div class="descContainer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel nulla ac turpis porta
-                                commodo eget sit amet sapien. Vivamus finibus nibh et sollicitudin pretium. In mollis
-                                erat non tellus.</p>
+                            <p>Discover unparalleled luxury and performance with the Range Rover. Designed to excel both on and off the road, this iconic SUV combines advanced technology with timeless elegance.</p>
                         </div>
                         <div class="optionsContainer">
                             <div class="firstContainer">
                                 <div class="option">
                                     <img src="../image/compteur-de-vitesse.png" />
-                                    <p class="vitesseValue">190 Km/h</p>
+                                    <p class="vitesseValue"><?= $carDetail['speed'] ?> Km/h</p>
                                 </div>
                                 <div class="option">
                                     <img src="../image/moteur-turbo.png" />
-                                    <p class="turboValue">220 KM</p>
+                                    <p class="turboValue"><?= $carDetail['turbo'] ?> KM</p>
                                 </div>
                             </div>
                             <div class="secondContainer">
                                 <div class="option">
                                     <img src="../image/manual-transmission.png" />
-                                    <p class="transmissionValue">Manual</p>
+                                    <p class="transmissionValue"><?= $carDetail['transmission'] ?></p>
                                 </div>
                                 <div class="option">
                                     <img src="../image/gas-station.png" />
-                                    <p class="gasValue">EV</p>
+                                    <p class="gasValue"><?= $carDetail['gas'] ?></p>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +182,7 @@
 
             <div class="timeDetails">
                 <div class="timePickUp">
-                    <p class="timeTitle" >pick-up</p>
+                    <p class="timeTitle">pick-up</p>
                     <p id="timeTitlePickUp">March 11, 2024 at 8:30 AM</p>
                 </div>
                 <div class="timeDropOff">
@@ -129,14 +196,19 @@
             <div>
                 <div class="priceContainer">
                     <p class="priceLabel">Total Amount</p>
-                    <p id="totalPrice">210 DT</p>
+                    <p id="totalPrice"><?= $carDetail['prix'] ?> DT</p>
                 </div>
 
+                <form action="CarDetails.php" method="post">
                 <div class="btnContainer">
-                    <div class="btn">
+                    <!-- <div class="btn">
                         <p>Book Now</p>
+                    </div> -->
+                        <input type="hidden" name="_method" value="rent">
+                        <!-- <input type="hidden" name="id" value="<?= $carDetail['id'] ?>"> -->
+                        <button type="submit" name="submit" style="cursor: pointer;background-color: #fd6435;border: 0px white; color: white;">Book Now</button>
                     </div>
-                </div>
+                </form>
 
             </div>
         </div>
