@@ -1,0 +1,59 @@
+ create table client(
+    -> id INT NOT NULL AUTO_INCREMENT,
+    -> nom varchar(30) not null,
+    -> prenom varchar(30) not null,
+    -> email varchar(30),
+    -> password varchar(100),
+    -> primary key(id));
+
+
+create table gestionnaire(
+    -> id INT NOT NULL AUTO_INCREMENT,
+    -> nom varchar(30) not null,
+    -> prenom varchar(30) not null,
+    -> email varchar(30),
+    -> password varchar(100),
+    -> primary key(id));
+
+create table admin(
+    -> id INT NOT NULL AUTO_INCREMENT,
+    -> nom varchar(30) not null,
+    -> prenom varchar(30) not null,
+    -> email varchar(30),
+    -> password varchar(100),
+    -> primary key(id));
+
+
+create table voiture(
+    -> id int not null auto_increment,
+    -> marque varchar(50),
+    -> model varchar(50),
+    -> prix int,
+    -> dispo BOOLEAN DEFAULT TRUE,
+    -> id_ges int,
+    -> primary key(id),
+    -> constraint fk_gestionnaire foreign key(id_ges) references gestionnaire(id));
+
+
+create table promotion(
+    -> id int not null auto_increment,
+    -> titre varchar(30),
+    -> message varchar(100),
+    -> picture varchar(200),
+    -> id_ges int,
+    -> id_voiture int,
+    -> primary key(id),
+    -> constraint fk_gestionnaire_promo foreign key(id_ges) references gestionnaire(id),
+    -> constraint fk_voiture_promo foreign key(id_voiture) references voiture(id));
+
+
+create table reservation(
+    -> id int not null auto_increment,
+    -> date_pick date,
+    -> date_drop date,
+    -> price int,
+    -> id_cli int,
+    -> id_voiture int,
+    -> primary key(id),
+    -> constraint fk_cli foreign key(id_cli) references client(id),
+    -> constraint fk_voiture_reser foreign key(id_voiture) references voiture(id));
